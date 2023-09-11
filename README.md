@@ -27,14 +27,15 @@ Bir örnek daha vermek gerekirse;
 
 ---
 
-### Peki bu araclarin nasil calistigini merak ettiniz mi?
+### Peki, Bu Araçların Nasıl Çalıştığını Merak Ettiniz mi?
 
-- Yapay zeka ve makine ogrenmesi modellerinin nasil calistigini merak edenler icin XAI (Explainable Artificial Intelligence) yani aciklanabilir yapay zeka kavrami ortaya cikti.
-- Makine öğrenmesi modelleri, veri bilimcilerin ve mühendislerin birçok sorunun çözümünde kullandığı bir araçtır. Ancak bu modellerin çoğu, kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu modellerin kararlarını açıklamak için XAI tekniklerine ihtiyaç duyulmaktadır.
-- Bu aralclarin basinda ise LIME( Local Interpretable Model-Agnostic Explanations) ve SHAP (SHapley Additive exPlanations) gelmektedir.
-- Bu iki arac ile yapay zeka modellerinin kararlarini aciklayabiliriz.
-- Bu alanda turkce kaynak nerdeyse yok ben sadece ingilizce kaynaklardan ve bu kutuphanelerin github daki orjinal dokumantasyonlarindan yararlanarak sizlere bu konuyu anlatmaya calisacagim.
-- Ilerki zamanlarda bu iki arac disinda yeni cikan araclarida inceleyip sizlerle paylasacagim.
+- Yapay zeka ve makine öğrenmesi modellerinin nasıl çalıştığını merak edenler için XAI (Explainable Artificial Intelligence) yani açıklanabilir yapay zeka kavramı ortaya çıktı.
+- Makine öğrenmesi modelleri, veri bilimcilerin ve mühendislerin birçok sorunu çözümünde kullandığı bir araçtır. Ancak bu modellerin çoğu, kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu modellerin kararlarını açıklamak için XAI tekniklerine ihtiyaç duyulmaktadır.
+- Bu araçların başında ise LIME (Local Interpretable Model-Agnostic Explanations) ve SHAP (SHapley Additive exPlanations) gelmektedir.
+- Bu iki araç ile yapay zeka modellerinin kararlarını açıklayabiliriz.
+- Bu alanda Türkçe kaynak neredeyse yok, ben sadece İngilizce kaynaklardan ve bu kütüphanelerin GitHub'daki orijinal dokümantasyonlarından yararlanarak sizlere bu konuyu anlatmaya çalışacağım.
+- İleriki zamanlarda bu iki araç dışında yeni çıkan araçları da inceleyip sizlerle paylaşacağım.
+
 
 ---
 
