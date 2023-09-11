@@ -77,8 +77,7 @@ exp.show_in_notebook(show_table=True, show_all=False) fonksiyonu ise ciktinin no
 
 ---
 
-Çıktımız 0.7 ile onaylandı sınıfını tahmin etmiş. Bu tahminin nedenini ise aşağıdaki şekilde açıklıyor:
-
+- Çıktımız 0.7 ile onaylandı sınıfını tahmin etmiş. Bu tahminin nedenini ise aşağıdaki şekilde açıklıyor:
 Müşterinin borç oranı 0.35 (sağdaki tabloda 0.35 değerini görebilirsiniz) ve bu değer 0.38 değerinden küçük ve 0.25 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
 Müşterinin KP (kredi puanı) değeri 740 ve bu değer 745 değerinden küçük ve 720 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
 Müşterinin G (gelir) değeri 650.000 ve bu değer 685.000 değerinden küçük ve 59.000 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
