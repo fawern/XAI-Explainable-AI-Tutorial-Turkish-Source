@@ -14,13 +14,7 @@ Basit bir örnek vermek gerekirse;
 
 Bir örnek daha vermek gerekirse;
 
-- Örneğin, bir banka hangi müşteriye kredi verip vermeyeceğine karar vermek için yapay zeka araçları kullanıyor olsun.
-  Siz de bu bankaya kredi başvurusu yaptınız ve elbette ki ülkenin ekonomik durumu göz önünde bulundurulduğunda ciddi bir ihtiyacınız var.
-  Banka, kredi başvurunuzu yapay zeka araçlarıyla değerlendiriyor ve sizin krediye uygun olmadığınıza karar veriyor.
-  Siz, Anadolu köyünden gelmiş, sıkıntılı bir dönemde bulunan birisiniz ve bu yapay zeka ya da model nedir, neden size kredi vermiyor diye düşünüyorsunuz.
-  Diyelim ki o bankada çalışan bir memursunuz ve bu durumu nasıl açıklarsınız?
-  İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor. Siz de bu durumu çiftçiye anlatıyorsunuz ve çiftçi, neden krediye uygun olmadığını kabul ediyor.
-
+- Örneğin, bir banka hangi müşteriye kredi verip vermeyeceğine karar vermek için yapay zeka araçları kullanıyor olsun. Siz de bu bankada çalışan birisiniz ve insanlara kredi veriyorsunuz. Banka, kredi başvurunuzu basit makine öğrenmesi modelleriyle değerlendiriyor ve kişinin krediye uygun olmadığına karar veriyor. Anadolu köyünden gelmiş birisine makine öğrenmesini anlatmak isterseniz, işin matematiğine girmeniz gerektiğini söylemek durumunda kalırsınız. 'Şimdi ne olacak?' der mi size 'Toprağım, bana neden kredi vermiyorsun?' diye. Şimdi siz bu durumu nasıl açıklarsınız? İşte bu durumda XAI devreye giriyor ve kişinin neden uygun olmadığını açıklıyor. Siz de bu durumu çiftçiye anlatıyorsunuz ve çiftçi, neden krediye uygun olmadığını kabul ediyor.
 ---
 
 ### Peki, Bu Araçların Nasıl Çalıştığını Merak Ettiniz mi?
