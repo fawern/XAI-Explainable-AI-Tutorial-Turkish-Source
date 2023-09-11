@@ -70,17 +70,25 @@ exp = explainer.explain_instance(
 exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
-## ![Lime Örnek](./output_img/lime_output_1.png)
+---
+
+![Lime Output 1](./output_img/lime_output_1.png)
+
+### Simdi gelin bu ciktiyi analiz edelim.
 
 Gelin, şimdi birlikte bu çıktıyı inceleyelim. Öncelikle, bizim girdiğimiz örnek için (Gelir: 80.000, Kredi Puanı: 800, Borç Oranı: 0.1) modelimiz kredi başvurusunu 0.9999 olasılıkla onaylayacağını söylüyor. LIME aracı ise bu kararın nasıl alındığını açıklıyor.
-
-LIME aracı, modelin kararını açıklamak için 3 adımda işlem yapar:
-
 En solda çıktı olasılıklarını verir. %88 olasılıkla kredi başvurusu onaylanacak, %12 olasılıkla reddedilecek.
 Ardından, bu çıktı olasılıklarının kolonlara olan etkilerini gösterir.
 Örneğin; Bu müşteri için Gelir, kredi almasında pozitif etki ediyor, ancak Borç ve Kredi Puanının kredi almasında negatif etkisi var.
 
-Şimdi bunu test edelim, örneğin, gelir 68.500'den büyük olduğu durumlarda pozitif etki ediyor. O zaman, bu geliri düşürelim, bakalım ne olacak
+## Şimdi bunu test edelim, örneğin, gelir 68.500'den büyük olduğu durumlarda pozitif etki ediyor. O zaman, bu geliri düşürelim, bakalım ne olacak
+
+- Çıktımız 0.7 ile onaylandı sınıfını tahmin etmiş. Bu tahminin nedenini ise aşağıdaki şekilde açıklıyor:
+  Müşterinin borç oranı 0.35 (sağdaki tabloda 0.35 değerini görebilirsiniz) ve bu değer 0.38 değerinden küçük ve 0.25 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
+  Müşterinin KP (kredi puanı) değeri 740 ve bu değer 745 değerinden küçük ve 720 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
+  Müşterinin G (gelir) değeri 650.000 ve bu değer 685.000 değerinden küçük ve 59.000 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
+
+---
 
 ```python
 
@@ -106,6 +114,6 @@ exp = explainer.explain_instance(
 exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
-![Lime Örnek](./output_img/lime_output_2.png)
+![Lime Output 2](./output_img/lime_output_2.png)
 
 Gördüğünüz gibi, gelir 68.500'den küçük olduğu durumda kredi başvurusu reddediliyor. Tabii ki, biz örnek olsun diye geliri çok düşürdük, ancak bu örnekle anladığımız şey gelirin kredi başvurusu için çok önemli olduğu.
