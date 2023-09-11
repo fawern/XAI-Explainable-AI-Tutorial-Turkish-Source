@@ -10,21 +10,11 @@
 
 Basit bir örnek vermek gerekirse;
 
-- Günümüzde bazı şirketler artık yüzlerce iş başvurusu için tek tek CV'leri incelemek yerine yapay zeka araçlarıyla CV'leri analiz ediyorlar ve sizin bu iş pozisyonuna uygun olup olmadığınızı belirliyorlar.
-  Ancak, bu araçların çoğu kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu araçların kararlarını açıklamak için Açıklanabilir Yapay Zeka (XAI) tekniklerine ihtiyaç duyulmaktadır. Neden mi? Çünkü düşünün ki bir şirkete başvuru yaptınız, CV'niz incelendi, ancak neden uygun olmadığınızı bilmiyorsunuz. Bu durumda sizin için bir haksızlık olduğunu düşünmez misiniz?
-  Ya da şirket size doğrudan "Bizim yapay zeka modelimiz sizi uygun bulmadı" derse, bu oldukça absürt olmaz mı?
-  Siz de demez misiniz, neden beni uygun bulmadı diye?
-  İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
+- Günümüzde bazı şirketler artık yüzlerce iş başvurusu için tek tek CV'leri incelemek yerine yapay zeka araçlarıyla CV'leri analiz ediyorlar ve sizin bu iş pozisyonuna uygun olup olmadığınızı belirliyorlar. Ancak, bu araçların çoğu kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu araçların kararlarını açıklamak için Açıklanabilir Yapay Zeka (XAI) tekniklerine ihtiyaç duyulmaktadır. Neden mi? Çünkü düşünün ki bir şirkete başvuru yaptınız, CV'niz incelendi ve bu iş için uygun olmadığınız belirlendi ancak neden uygun olmadığınızı bilmiyorsunuz ve size söylenmedi. Bu durumda size bir haksızlık yapıldığını düşünmez misiniz? Ya da şirket size doğrudan "Bizim yapay zeka modelimiz sizi uygun bulmadı" derse, bu oldukça absürt olmaz mı? Siz de demez misiniz, neden beni uygun bulmadı diye? İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
 
 Bir örnek daha vermek gerekirse;
 
-- Örneğin, bir banka hangi müşteriye kredi verip vermeyeceğine karar vermek için yapay zeka araçları kullanıyor olsun.
-  Siz de bu bankaya kredi başvurusu yaptınız ve elbette ki ülkenin ekonomik durumu göz önünde bulundurulduğunda ciddi bir ihtiyacınız var.
-  Banka, kredi başvurunuzu yapay zeka araçlarıyla değerlendiriyor ve sizin krediye uygun olmadığınıza karar veriyor.
-  Siz, Anadolu köyünden gelmiş, sıkıntılı bir dönemde bulunan birisiniz ve bu yapay zeka ya da model nedir, neden size kredi vermiyor diye düşünüyorsunuz.
-  Diyelim ki o bankada çalışan bir memursunuz ve bu durumu nasıl açıklarsınız?
-  İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor. Siz de bu durumu çiftçiye anlatıyorsunuz ve çiftçi, neden krediye uygun olmadığını kabul ediyor.
-
+- Örneğin, bir banka hangi müşteriye kredi verip vermeyeceğine karar vermek için yapay zeka araçları kullanıyor olsun. Siz de bu bankada çalışan birisiniz ve insanlara kredi veriyorsunuz. Banka, kredi başvurunuzu basit makine öğrenmesi modelleriyle değerlendiriyor ve kişinin krediye uygun olmadığına karar veriyor. Anadolu köyünden gelmiş birisine makine öğrenmesini anlatmak isterseniz, işin matematiğine girmeniz gerektiğini söylemek durumunda kalırsınız. 'Şimdi ne olacak?' der mi size 'Toprağım, bana neden kredi vermiyorsun?' diye. Şimdi siz bu durumu nasıl açıklarsınız? İşte bu durumda XAI devreye giriyor ve kişinin neden uygun olmadığını açıklıyor. Siz de bu durumu çiftçiye anlatıyorsunuz ve çiftçi, neden krediye uygun olmadığını kabul ediyor.
 ---
 
 ### Peki, Bu Araçların Nasıl Çalıştığını Merak Ettiniz mi?
@@ -76,7 +66,7 @@ exp.show_in_notebook(show_table=True, show_all=False)
 
 ### Simdi gelin bu ciktiyi analiz edelim.
 
-Gelin, şimdi birlikte bu çıktıyı inceleyelim. Öncelikle, bizim girdiğimiz örnek için (Gelir: 80.000, Kredi Puanı: 800, Borç Oranı: 0.1) modelimiz kredi başvurusunu 0.9999 olasılıkla onaylayacağını söylüyor. LIME aracı ise bu kararın nasıl alındığını açıklıyor.
+Öncelikle, bizim girdiğimiz örnek için (Gelir: 80.000, Kredi Puanı: 800, Borç Oranı: 0.1) modelimiz kredi başvurusunu 0.9999 olasılıkla onaylayacağını söylüyor. LIME aracı ise bu kararın nasıl alındığını açıklıyor.
 En solda çıktı olasılıklarını verir. %88 olasılıkla kredi başvurusu onaylanacak, %12 olasılıkla reddedilecek.
 Ardından, bu çıktı olasılıklarının kolonlara olan etkilerini gösterir.
 Örneğin; Bu müşteri için Gelir, kredi almasında pozitif etki ediyor, ancak Borç ve Kredi Puanının kredi almasında negatif etkisi var.
