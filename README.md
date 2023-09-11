@@ -1,30 +1,29 @@
 ### Yapay Zeka ve XAI (Explainable Artificial Intelligence) Nedir?
 
-- Yapay zeka, bilgisayarların insanların yaptığı gibi düşünmesini sağlayan bir bilim dalıdır. Bildiniz uzeren Chat-gpt gibi araclarinda cikmasiyla yapay zeka hayatimiza iyice girmeye basladi biz farkinda olsakda olmasakda heryede bu araclari kullaniyoruz. Peki siz hayatimizin heryerinde kullandigimiz bu araclarin nasil calistigini merak ettiniz mi?
+- Yapay zeka, bilgisayarların insanların yaptığı gibi düşünmesini sağlayan bir bilim dalıdır. Bildiğiniz üzere, Chat-GPT gibi araçların da çıkmasıyla yapay zeka hayatımıza iyice girmeye başladı. Biz farkında olsak da olmasak da her yerde bu araçları kullanıyoruz. Peki, siz hayatımızın her yerinde kullandığımız bu araçların nasıl çalıştığını merak ettiniz mi?
 
 ---
 
 ### XAI (Explainable Artificial Intelligence) Nedir?
 
-- açıklanabilir yapay zeka (XAI), yapay zeka sistemlerini daha "insan dostu" hale getirmeyi amaçlayan bir yaklaşımdır. Yapay zeka sistemlerinin nasıl kararlar verdiğini, hangi bilgileri kullanarak bu kararları aldığını ve neden belirli sonuçlara ulaştığını daha iyi anlayabiliriz. Bunu yapmak, özellikle hayati öneme sahip kararlar alındığında, güvenilirliği artırır ve insanların bu sistemlere daha fazla güven duymasına yardımcı olur. Başka bir deyişle, XAI, yapay zekanın "büyü" gibi görünmesini önler ve insanların bu teknolojiyi daha şeffaf ve anlaşılır bir şekilde kullanmasına yardımcı olur.
+- Açıklanabilir yapay zeka (XAI), yapay zeka sistemlerini daha "insan dostu" hale getirmeyi amaçlayan bir yaklaşımdır. Yapay zeka sistemlerinin nasıl kararlar verdiğini, hangi bilgileri kullanarak bu kararları aldığını ve neden belirli sonuçlara ulaştığını daha iyi anlayabiliriz. Bunu yapmak, özellikle hayati öneme sahip kararlar alındığında, güvenilirliği artırır ve insanların bu sistemlere daha fazla güven duymasına yardımcı olur. Başka bir deyişle, XAI, yapay zekanın "büyü gibi" görünmesini önler ve insanların bu teknolojiyi daha şeffaf ve anlaşılır bir şekilde kullanmasına yardımcı olur.
 
-Basit bir ornek vermek gerekirse;
+Basit bir örnek vermek gerekirse;
 
-- gunumuzde bazi sirketler artik 100 lerce is basvurusu icin tektek cv okumuyorlar. Bunun yerine yapay zeka araclari ile cv'lerinizi okuyorlar ve sizin bu is icin uygun olup olmadiginizi belirliyorlar.
-- Bu araclarin cogu ise kararlarini aciklamak icin tasarlanmamistir. Bu nedenle, bu araclarin kararlarini aciklamak icin XAI tekniklerine ihtiyac duyulmaktadir.
-- Neden mi ? cunku bir dusunun bir sirkete basvuru yaptiniz ve cv'niz okundu ve sizin bu is icin uygun olmadiginiza karar verildi. Ve neden uygun olmadiginizi bilmiyorsunuz. Bu durumda sizin icin bir haksizlik oldugunu dusunmez misiniz?
-- yada sirket size direk bizim yapay zeka modelimiz sizi uygun bulmadi derse cok abes olmaz mi?
-- Sizde demez misiniz neden beni uygun bulmadi diye?
-- Bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadiginizi acikliyor.
+- Günümüzde bazı şirketler artık yüzlerce iş başvurusu için tek tek CV'leri incelemek yerine yapay zeka araçlarıyla CV'leri analiz ediyorlar ve sizin bu iş pozisyonuna uygun olup olmadığınızı belirliyorlar.
+  Ancak, bu araçların çoğu kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu araçların kararlarını açıklamak için Açıklanabilir Yapay Zeka (XAI) tekniklerine ihtiyaç duyulmaktadır. Neden mi? Çünkü düşünün ki bir şirkete başvuru yaptınız, CV'niz incelendi, ancak neden uygun olmadığınızı bilmiyorsunuz. Bu durumda sizin için bir haksızlık olduğunu düşünmez misiniz?
+  Ya da şirket size doğrudan "Bizim yapay zeka modelimiz sizi uygun bulmadı" derse, bu oldukça absürt olmaz mı?
+  Siz de demez misiniz, neden beni uygun bulmadı diye?
+  İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
 
-Bir ornek daha vermek gerekirse;
+Bir örnek daha vermek gerekirse;
 
-- Ornegin bir banka hangi musteriye kredi verip vermeyecegine karar vermek icin yapay zeka araclari kullaniyor olsun.
-- Sizde bu bankaya kredi basvurusu yaptiniz ve cok ihtiyaciniz var malum ulkemizin durumu belli :)
-- Banka sizin kredi basvurunuzu yapay zeka araclari ile degerlendiriyor ve sizin krediye uygun olmadiginiza karar veriyor.
-- Siz anadolu koyunden gelmis gariban birisiniz nerden bilceksiniz yok yapay zekaymis yok modelmis. Ya topragim bana neden kredi vermiyorsun diye sorarsiniz.
-- Orda calisan banka memuru oldugunuzu dusunuz nasil aciklarisiniz bu durumu?
-- Iste bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadiginizi acikliyor. sizde bu durumu ciftciye anlatiyorsunuz ve ciftci krediye uygun olmadigini kabul ediyor.
+- Örneğin, bir banka hangi müşteriye kredi verip vermeyeceğine karar vermek için yapay zeka araçları kullanıyor olsun.
+  Siz de bu bankaya kredi başvurusu yaptınız ve elbette ki ülkenin ekonomik durumu göz önünde bulundurulduğunda ciddi bir ihtiyacınız var.
+  Banka, kredi başvurunuzu yapay zeka araçlarıyla değerlendiriyor ve sizin krediye uygun olmadığınıza karar veriyor.
+  Siz, Anadolu köyünden gelmiş, sıkıntılı bir dönemde bulunan birisiniz ve bu yapay zeka ya da model nedir, neden size kredi vermiyor diye düşünüyorsunuz.
+  Diyelim ki o bankada çalışan bir memursunuz ve bu durumu nasıl açıklarsınız?
+  İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor. Siz de bu durumu çiftçiye anlatıyorsunuz ve çiftçi, neden krediye uygun olmadığını kabul ediyor.
 
 ---
 
