@@ -62,6 +62,9 @@ exp = explainer.explain_instance(
 exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
+
+
+![Lime Output 1](./output_img/lime_output_1.png)
 ### Simdi gelin bu ciktiyi analiz edelim.
 
 oncelikle lime kutuphanesini import ediyoruz ve lime_tabular.LimeTabularExplainer fonksiyonunu cagiriyoruz.
@@ -79,9 +82,6 @@ exp.show_in_notebook(show_table=True, show_all=False) fonksiyonu ise ciktinin no
 Müşterinin borç oranı 0.35 (sağdaki tabloda 0.35 değerini görebilirsiniz) ve bu değer 0.38 değerinden küçük ve 0.25 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
 Müşterinin KP (kredi puanı) değeri 740 ve bu değer 745 değerinden küçük ve 720 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
 Müşterinin G (gelir) değeri 650.000 ve bu değer 685.000 değerinden küçük ve 59.000 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
-
-![Lime Output 1](./output_img/lime_output_1.png)
-
 ---
 
 ```python
