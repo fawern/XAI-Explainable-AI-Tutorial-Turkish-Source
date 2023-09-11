@@ -36,6 +36,14 @@ Bir örnek daha vermek gerekirse;
 - Bu alanda Türkçe kaynak neredeyse yok, ben sadece İngilizce kaynaklardan ve bu kütüphanelerin GitHub'daki orijinal dokümantasyonlarından yararlanarak sizlere bu konuyu anlatmaya çalışacağım.
 - İleriki zamanlarda bu iki araç dışında yeni çıkan araçları da inceleyip sizlerle paylaşacağım.
 
+---
+
+### Simdi bir Lime kodu gorelim
+
+- Asagidaki kodda, LimeTabularExplainer sınıfını kullanarak bir Lime nesnesi oluşturuyoruz.
+- Bu sınıfın içerisindeki LimeTabularExplainer fonksiyonuna training_data parametresi olarak X_train'i, feature_names parametresi olarak da X_train'in sütun isimlerini veriyoruz.
+- Daha sonra, LimeTabularExplainer sınıfının içerisindeki explain_instance fonksiyonuna data_row parametresi olarak [80000, 800, 0.1] değerlerini, predict_fn parametresi olarak da model.predict_proba fonksiyonunu veriyoruz.
+- Daha sonra, exp.show_in_notebook fonksiyonunu kullanarak Lime aracının çıktısını görebiliyoruz.
 
 ---
 
@@ -55,36 +63,27 @@ explainer = lime_tabular.LimeTabularExplainer(
     BO = Borç Oranı
 """
 exp = explainer.explain_instance(
-    data_row=X_test[0],
+    data_row=np.array([80000, 800, 0.1]),
     predict_fn=model.predict_proba
 )
 
 exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
-### Simdi gelin bu ciktiyi analiz edelim.
+## ![Lime Örnek](./output_img/lime_output_1.png)
 
-oncelikle lime kutuphanesini import ediyoruz ve lime_tabular.LimeTabularExplainer fonksiyonunu cagiriyoruz.
-Bu fonksiyonun icine training_data parametresine X_train, feature_names parametresine ise X_train sutunlarinin isimlerini veriyoruz.
-class_names parametresine ise modelimizin tahmin edecegi siniflari veriyoruz.
-mode parametresine ise modelimizin siniflandirma mi yoksa regresyon mu yaptigini belirtiyoruz.
-exp = explainer.explain_instance fonksiyonunun icine ise data_row parametresine X_test[0] veriyoruz.
-predict_fn parametresine ise model.predict_proba fonksiyonunu veriyoruz.
-exp.show_in_notebook(show_table=True, show_all=False) fonksiyonu ise ciktinin notebookta gosterilmesini sagliyor.
+Gelin, şimdi birlikte bu çıktıyı inceleyelim. Öncelikle, bizim girdiğimiz örnek için (Gelir: 80.000, Kredi Puanı: 800, Borç Oranı: 0.1) modelimiz kredi başvurusunu 0.9999 olasılıkla onaylayacağını söylüyor. LIME aracı ise bu kararın nasıl alındığını açıklıyor.
 
----
+LIME aracı, modelin kararını açıklamak için 3 adımda işlem yapar:
 
-Çıktımız 0.7 ile onaylandı sınıfını tahmin etmiş. Bu tahminin nedenini ise aşağıdaki şekilde açıklıyor:
+En solda çıktı olasılıklarını verir. %88 olasılıkla kredi başvurusu onaylanacak, %12 olasılıkla reddedilecek.
+Ardından, bu çıktı olasılıklarının kolonlara olan etkilerini gösterir.
+Örneğin; Bu müşteri için Gelir, kredi almasında pozitif etki ediyor, ancak Borç ve Kredi Puanının kredi almasında negatif etkisi var.
 
-Müşterinin borç oranı 0.35 (sağdaki tabloda 0.35 değerini görebilirsiniz) ve bu değer 0.38 değerinden küçük ve 0.25 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
-Müşterinin KP (kredi puanı) değeri 740 ve bu değer 745 değerinden küçük ve 720 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
-Müşterinin G (gelir) değeri 650.000 ve bu değer 685.000 değerinden küçük ve 59.000 değerinden büyük olduğu için onaylandı sınıfını tahmin etmiş.
-
-![Lime Output 1](./output_img/lime_output_1.png)
-
----
+Şimdi bunu test edelim, örneğin, gelir 68.500'den büyük olduğu durumlarda pozitif etki ediyor. O zaman, bu geliri düşürelim, bakalım ne olacak
 
 ```python
+
 import lime
 from lime import lime_tabular
 
@@ -100,11 +99,13 @@ explainer = lime_tabular.LimeTabularExplainer(
     BO = Borç Oranı
 """
 exp = explainer.explain_instance(
-    data_row=X_test[1],
+    data_row=np.array([40000, 800, 0.1]),
     predict_fn=model.predict_proba
 )
 
 exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
-![Lime Output 2](./output_img/lime_output_2.png)
+![Lime Örnek](./output_img/lime_output_2.png)
+
+Gördüğünüz gibi, gelir 68.500'den küçük olduğu durumda kredi başvurusu reddediliyor. Tabii ki, biz örnek olsun diye geliri çok düşürdük, ancak bu örnekle anladığımız şey gelirin kredi başvurusu için çok önemli olduğu.
