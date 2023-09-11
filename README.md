@@ -62,7 +62,7 @@ exp = explainer.explain_instance(
 exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
-[(lime_output_1.png)]
+![Lime Output 1](lime_output_1.png)
 
 ---
 
