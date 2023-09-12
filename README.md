@@ -160,4 +160,5 @@ exp.show_in_notebook(show_table=True, show_all=False)
 
 ```
 
+![Lime Output 4](./output_img/lime_output_4.png)
 Banka soydu herhalde :) bir anda geliri bu kadar artti. Görüleceği üzere, çiftçi kredi aldı. :)
