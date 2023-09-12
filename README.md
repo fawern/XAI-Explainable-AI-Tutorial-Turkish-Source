@@ -10,19 +10,20 @@
 
 Basit bir örnek vermek gerekirse;
 
-- Günümüzde bazı şirketler artık yüzlerce iş başvurusu için tek tek CV'leri incelemek yerine yapay zeka araçlarıyla CV'leri analiz ediyorlar ve sizin bu iş pozisyonuna uygun olup olmadığınızı belirliyorlar. Ancak, bu araçların çoğu kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu araçların kararlarını açıklamak için Açıklanabilir Yapay Zeka (XAI) tekniklerine ihtiyaç duyulmaktadır. Neden mi? Çünkü düşünün ki bir şirkete başvuru yaptınız, CV'niz incelendi ve bu iş için uygun olmadığınız belirlendi ancak neden uygun olmadığınızı bilmiyorsunuz ve size söylenmedi. Bu durumda size bir haksızlık yapıldığını düşünmez misiniz? Ya da şirket size doğrudan "Bizim yapay zeka modelimiz sizi uygun bulmadı" derse, bu oldukça absürt olmaz mı? Siz de demez misiniz, neden beni uygun bulmadı diye? İşte bu durumda XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
+- Günümüzde bazı şirketler artık yüzlerce iş başvurusu için tek tek CV'leri incelemek yerine yapay zeka araçlarıyla CV'leri analiz ediyorlar ve sizin bu iş pozisyonuna uygun olup olmadığınızı belirliyorlar. Ancak, bu araçların çoğu kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu araçların kararlarını açıklamak için Açıklanabilir Yapay Zeka (XAI) tekniklerine ihtiyaç duyulmaktadır. Neden mi? Çünkü düşünün ki bir şirkete başvuru yaptınız, CV'niz incelendi ve bu iş için uygun olmadığınız belirlendi ancak neden uygun olmadığınızı bilmiyorsunuz ve size söylenmedi. Bu durumda size bir haksızlık yapıldığını düşünmez misiniz? Ya da şirket size doğrudan "Bizim yapay zeka modelimiz sizi uygun bulmadı" derse, bu oldukça absürt olmaz mı? Siz de demez misiniz, neden beni uygun bulmadı diye?
 
 Bir örnek daha vermek gerekirse;
 
-- Örneğin, bir banka hangi müşteriye kredi verip vermeyeceğine karar vermek için yapay zeka araçları kullanıyor olsun. Siz de bu bankada çalışan birisiniz ve insanlara kredi veriyorsunuz. Banka, kredi başvurunuzu basit makine öğrenmesi modelleriyle değerlendiriyor ve kişinin krediye uygun olmadığına karar veriyor. Anadolu köyünden gelmiş birisine makine öğrenmesini anlatmak isterseniz, işin matematiğine girmeniz gerektiğini söylemek durumunda kalırsınız. 'Şimdi ne olacak?' der mi size 'Toprağım, bana neden kredi vermiyorsun?' diye. Şimdi siz bu durumu nasıl açıklarsınız? İşte bu durumda XAI devreye giriyor ve kişinin neden uygun olmadığını açıklıyor. Siz de bu durumu çiftçiye anlatıyorsunuz ve çiftçi, neden krediye uygun olmadığını kabul ediyor.
+- Örneğin, siz bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeme konusunda kararlar almak için basit makine öğrenimi araçlarını kullanıyor. Bir gün Anadolu'dan gelmiş bir çiftçi kredi başvurusu yapıyor ve bu araç çiftciye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi, sizden bunun nedenini sorar. Malum, çiftçinin ekini var, ülkenin durumu belli :) nasıl açıklarsınız bu durumu oturup çiftçiye bu modelin arkasındaki matematiği anlatacak değilsiniz herhalde :) Adam demez mi, "Ya toprağımı başlatma, şimdi cebirinden ve kalkülüsünden bana nedenini söyle." Siz bu durumu çiftçiye nasıl açıklarsınız?
+
+İşte bu gibi durumlardada XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
+
 ---
 
 ### Peki, Bu Araçların Nasıl Çalıştığını Merak Ettiniz mi?
 
-- Yapay zeka ve makine öğrenmesi modellerinin nasıl çalıştığını merak edenler için XAI (Explainable Artificial Intelligence) yani açıklanabilir yapay zeka kavramı ortaya çıktı.
 - Makine öğrenmesi modelleri, veri bilimcilerin ve mühendislerin birçok sorunu çözümünde kullandığı bir araçtır. Ancak bu modellerin çoğu, kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu modellerin kararlarını açıklamak için XAI tekniklerine ihtiyaç duyulmaktadır.
 - Bu araçların başında ise LIME (Local Interpretable Model-Agnostic Explanations) ve SHAP (SHapley Additive exPlanations) gelmektedir.
-- Bu iki araç ile yapay zeka modellerinin kararlarını açıklayabiliriz.
 - Bu alanda Türkçe kaynak neredeyse yok, ben sadece İngilizce kaynaklardan ve bu kütüphanelerin GitHub'daki orijinal dokümantasyonlarından yararlanarak sizlere bu konuyu anlatmaya çalışacağım.
 - İleriki zamanlarda bu iki araç dışında yeni çıkan araçları da inceleyip sizlerle paylaşacağım.
 
