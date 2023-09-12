@@ -43,7 +43,7 @@ import lime
 from lime import lime_tabular
 
 explainer = lime_tabular.LimeTabularExplainer(
-    training_data=np.array(X_train),
+    training_data=np.array(X),
     feature_names=['G', 'KP', 'BO'],
     class_names=['Reddedildi', 'Onaylandı'],
     mode='classification'
@@ -77,12 +77,11 @@ Ardından, bu çıktı olasılıklarının kolonlara olan etkilerini gösteriyor
 ---
 
 ```python
-
 import lime
 from lime import lime_tabular
 
 explainer = lime_tabular.LimeTabularExplainer(
-    training_data=np.array(X_train),
+    training_data=np.array(X),
     feature_names=['G', 'KP', 'BO'],
     class_names=['Reddedildi', 'Onaylandı'],
     mode='classification'
@@ -102,4 +101,34 @@ exp.show_in_notebook(show_table=True, show_all=False)
 
 ![Lime Output 2](./output_img/lime_output_2.png)
 
-Gördüğünüz gibi, gelir 68.500'den küçük olduğu durumda kredi başvurusu reddediliyor. Tabii ki, biz örnek olsun diye geliri çok düşürdük, ancak bu örnekle anladığımız şey gelirin kredi başvurusu için çok önemli olduğu.
+Gördüğünüz gibi, gelir 68.500'den küçük olduğu durumda kredi başvurusu reddediliyor. Tabii ki, biz örnek olsun diye geliri çok düşürdük, ancak bu örnekle anladığımız şey gelirin kredi başvurusu onayı için önemli bir faktör olduğu.
+
+Simdi gelin bizim bir ciftcimiz vardi ya, onun icin de Lime aracini kullanalim.
+malum ona kredi vermemistik :(
+
+---
+
+```python
+import lime
+from lime import lime_tabular
+
+explainer = lime_tabular.LimeTabularExplainer(
+    training_data=np.array(X),
+    feature_names=['G', 'KP', 'BO'],
+    class_names=['Reddedildi', 'Onaylandı'],
+    mode='classification'
+)
+"""
+    G = Gelir
+    KP = Kredi Puanı
+    BO = Borç Oranı
+"""
+exp = explainer.explain_instance(
+    data_row=np.array([3000, 600, 0.5]),
+    predict_fn=model.predict_proba
+)
+
+exp.show_in_notebook(show_table=True, show_all=False)
+```
+
+![Lime Output 3](./output_img/lime_output_3.png)
