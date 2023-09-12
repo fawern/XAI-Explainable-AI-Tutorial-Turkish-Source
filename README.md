@@ -1,4 +1,4 @@
-### Yapay Zeka ve XAI (Explainable Artificial Intelligence) Nedir?
+### Yapay Zeka ve XAI (Explainable Artificial Intelligence) Nedir ?
 
 - Yapay zeka, bilgisayarların insanların yaptığı gibi düşünmesini sağlayan bir bilim dalıdır. Bildiğiniz üzere, Chat-GPT gibi araçların da çıkmasıyla yapay zeka hayatımıza iyice girmeye başladı. Biz farkında olsak da olmasak da her yerde bu araçları kullanıyoruz. Peki, siz hayatımızın her yerinde kullandığımız bu araçların nasıl çalıştığını merak ettiniz mi?
 
