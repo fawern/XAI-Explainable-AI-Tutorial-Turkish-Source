@@ -133,4 +133,31 @@ exp.show_in_notebook(show_table=True, show_all=False)
 
 ![Lime Output 3](./output_img/lime_output_3.png)
 
-Görüleceği üzere, bu çiftçi için kredi başvurusu reddedildi, çünkü geliri düşük, kredi puanı düşük ve borç oranı yüksekti. Bu durumda, çiftçiye kredi vermediğimiz için haklı çıkmışız. :)
+Görüleceği üzere, bu çiftçi için kredi başvurusu reddedildi, çünkü geliri düşük, kredi puanı düşük ve borç oranı yüksek. Bu durumda, çiftçiye kredi vermediğimiz için haklı çıkmışız. :)
+Çiftci sorunu sormuştu ya, biz de cevabını verdik. :) Şimdi çiftçi gitti, gelirini ve kredi puanını yükseltti, borç oranını düşürdü. Bakalım ne olacak?
+
+```python
+import lime
+from lime import lime_tabular
+
+explainer = lime_tabular.LimeTabularExplainer(
+    training_data=np.array(X),
+    feature_names=['G', 'KP', 'BO'],
+    class_names=['Reddedildi', 'Onaylandı'],
+    mode='classification'
+)
+"""
+    G = Gelir
+    KP = Kredi Puanı
+    BO = Borç Oranı
+"""
+exp = explainer.explain_instance(
+    data_row=np.array([90000, 900, 0.1]),
+    predict_fn=model.predict_proba
+)
+
+exp.show_in_notebook(show_table=True, show_all=False)
+
+```
+
+Banka soydu herhalde :) bir anda geliri bu kadar artti. Görüleceği üzere, çiftçi kredi aldı. :)
