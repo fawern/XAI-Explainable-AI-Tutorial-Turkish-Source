@@ -103,8 +103,8 @@ exp.show_in_notebook(show_table=True, show_all=False)
 
 Gördüğünüz gibi, gelir 68.500'den küçük olduğu durumda kredi başvurusu reddediliyor. Tabii ki, biz örnek olsun diye geliri çok düşürdük, ancak bu örnekle anladığımız şey gelirin kredi başvurusu onayı için önemli bir faktör olduğu.
 
-Simdi gelin bizim bir ciftcimiz vardi ya, onun icin de Lime aracini kullanalim.
-malum ona kredi vermemistik :(
+Şimdi gelin, bizim bir çiftçimiz vardı ya, onun için de Lime aracını kullanalım.
+Malum, ona kredi vermemiştik. :(
 
 ---
 
@@ -132,3 +132,5 @@ exp.show_in_notebook(show_table=True, show_all=False)
 ```
 
 ![Lime Output 3](./output_img/lime_output_3.png)
+
+Görüleceği üzere, bu çiftçi için kredi başvurusu reddedildi, çünkü geliri düşük, kredi puanı düşük ve borç oranı yüksekti. Bu durumda, çiftçiye kredi vermediğimiz için haklı çıkmışız. :)
