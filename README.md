@@ -14,7 +14,7 @@ Basit bir örnek vermek gerekirse;
 
 Bir örnek daha vermek gerekirse;
 
-- Örneğin, siz bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeme konusunda kararlar almak için basit makine öğrenimi araçlarını kullanıyor. Bir gün Anadolu'dan gelmiş bir çiftçi kredi başvurusu yapıyor ve bu araç çiftciye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi, sizden bunun nedenini sorar. Malum, çiftçinin ekini var, ülkenin durumu belli :) nasıl açıklarsınız bu durumu oturup çiftçiye bu modelin arkasındaki matematiği anlatacak değilsiniz herhalde :) Adam demez mi, "Ya toprağımı başlatma, şimdi cebirinden ve kalkülüsünden bana nedenini söyle." Siz bu durumu çiftçiye nasıl açıklarsınız?
+- Örneğin, siz bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeme konusunda kararlar almak için basit makine öğrenimi araçlarını kullanıyor. Bir gün Anadolu'dan gelmiş bir çiftçi kredi başvurusu yapıyor ve bu araç çiftciye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi, sizden bunun nedenini sorar. Malum, çiftçinin ekini var, ülkenin durumu belli :) nasıl açıklarsınız bu durumu oturup çiftçiye bu modelin arkasındaki matematiği anlatacak değilsiniz herhalde :) Adam demez mi, "Ya toprağımı başlatma, şimdi cebirinden kalkülüsünden bana nedenini söyle." Siz bu durumu çiftçiye nasıl açıklarsınız?
 
 İşte bu gibi durumlardada XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
 
