@@ -8,15 +8,11 @@
 
 - Açıklanabilir yapay zeka (XAI), yapay zeka sistemlerini daha "insan dostu" hale getirmeyi amaçlayan bir yaklaşımdır. Yapay zeka sistemlerinin nasıl kararlar verdiğini, hangi bilgileri kullanarak bu kararları aldığını ve neden belirli sonuçlara ulaştığını daha iyi anlayabiliriz. Bunu yapmak, özellikle hayati öneme sahip kararlar alındığında, güvenilirliği artırır ve insanların bu sistemlere daha fazla güven duymasına yardımcı olur. Başka bir deyişle, XAI, yapay zekanın "büyü gibi" görünmesini önler ve insanların bu teknolojiyi daha şeffaf ve anlaşılır bir şekilde kullanmasına yardımcı olur.
 
-Basit bir örnek vermek gerekirse;
+Sınıflandırma için basit bir örnek vermek gerekirse;
 
-- Günümüzde bazı şirketler artık yüzlerce iş başvurusu için tek tek CV'leri incelemek yerine yapay zeka araçlarıyla CV'leri analiz ediyorlar ve sizin bu iş pozisyonuna uygun olup olmadığınızı belirliyorlar. Ancak, bu araçların çoğu kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu araçların kararlarını açıklamak için Açıklanabilir Yapay Zeka (XAI) tekniklerine ihtiyaç duyulmaktadır. Neden mi? Çünkü düşünün ki bir şirkete başvuru yaptınız, CV'niz incelendi ve bu iş için uygun olmadığınız belirlendi ancak neden uygun olmadığınızı bilmiyorsunuz ve size söylenmedi. Bu durumda size bir haksızlık yapıldığını düşünmez misiniz? Ya da şirket size doğrudan "Bizim yapay zeka modelimiz sizi uygun bulmadı" derse, bu oldukça absürt olmaz mı? Siz de demez misiniz, neden beni uygun bulmadı diye?
+- Örneğin, siz bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeme konusunda kararlar almak için basit makine öğrenimi modellerini kullanıyor olsun. Bir gün Anadolunun ücra bir küyünden gelmiş bir çiftçi kredi başvurusu yapıyor ve bu model çiftciye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi, sizden bunun nedenini sorar. Malum, çiftçinin ekini var, ülkenin durumu belli :) nasıl açıklarsınız bu durumu oturup çiftçiye bu modelin arkasındaki matematiği anlatacak değilsiniz herhalde :) Adam demez mi, "Ya toprağım başlatma şimdi cebirinden ve kalkülüsünden bana nedenini söyle." Siz bu durumu çiftçiye nasıl açıklarsınız?
 
-Bir örnek daha vermek gerekirse;
-
-- Örneğin, siz bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeme konusunda kararlar almak için basit makine öğrenimi araçlarını kullanıyor. Bir gün Anadolu'dan gelmiş bir çiftçi kredi başvurusu yapıyor ve bu araç çiftciye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi, sizden bunun nedenini sorar. Malum, çiftçinin ekini var, ülkenin durumu belli :) nasıl açıklarsınız bu durumu oturup çiftçiye bu modelin arkasındaki matematiği anlatacak değilsiniz herhalde :) Adam demez mi, "Ya toprağımı başlatma, şimdi cebirinden ve kalkülüsünden bana nedenini söyle." Siz bu durumu çiftçiye nasıl açıklarsınız?
-
-İşte bu gibi durumlardada XAI teknikleri devreye giriyor ve sizin neden uygun olmadığınızı açıklıyor.
+İşte bu gibi durumlar da XAI devreye giriyor ve modelin aldığı kararı açıklıyor.
 
 ---
 
