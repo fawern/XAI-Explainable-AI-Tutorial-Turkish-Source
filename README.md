@@ -39,7 +39,7 @@ import lime
 from lime import lime_tabular
 
 explainer = lime_tabular.LimeTabularExplainer(
-    training_data=np.array(X),
+    training_data=np.array(X_train),
     feature_names=['G', 'KP', 'BO'],
     class_names=['Reddedildi', 'Onaylandı'],
     mode='classification'
@@ -77,7 +77,7 @@ import lime
 from lime import lime_tabular
 
 explainer = lime_tabular.LimeTabularExplainer(
-    training_data=np.array(X),
+    training_data=np.array(X_train),
     feature_names=['G', 'KP', 'BO'],
     class_names=['Reddedildi', 'Onaylandı'],
     mode='classification'
@@ -109,7 +109,7 @@ import lime
 from lime import lime_tabular
 
 explainer = lime_tabular.LimeTabularExplainer(
-    training_data=np.array(X),
+    training_data=np.array(X_train),
     feature_names=['G', 'KP', 'BO'],
     class_names=['Reddedildi', 'Onaylandı'],
     mode='classification'
@@ -137,7 +137,7 @@ import lime
 from lime import lime_tabular
 
 explainer = lime_tabular.LimeTabularExplainer(
-    training_data=np.array(X),
+    training_data=np.array(X_train),
     feature_names=['G', 'KP', 'BO'],
     class_names=['Reddedildi', 'Onaylandı'],
     mode='classification'
