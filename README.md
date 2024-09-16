@@ -1,36 +1,43 @@
-### Yapay Zeka ve XAI (Explainable Artificial Intelligence) Nedir ?
+### Yapay Zeka (AI) Nedir?
 
-- Yapay zeka, bilgisayarların insanların yaptığı gibi düşünmesini sağlayan bir bilim dalıdır. Bildiğiniz üzere, Chat-GPT gibi araçların da çıkmasıyla yapay zeka hayatımıza iyice girmeye başladı. Biz farkında olsak da olmasak da her yerde bu araçları kullanıyoruz. Peki, siz hayatımızın her yerinde kullandığımız bu araçların nasıl çalıştığını merak ettiniz mi?
-
----
-
-### XAI (Explainable Artificial Intelligence) Nedir?
-
-- Açıklanabilir yapay zeka (XAI), yapay zeka sistemlerini daha "insan dostu" hale getirmeyi amaçlayan bir yaklaşımdır. Yapay zeka sistemlerinin nasıl kararlar verdiğini, hangi bilgileri kullanarak bu kararları aldığını ve neden belirli sonuçlara ulaştığını daha iyi anlayabiliriz. Bunu yapmak, özellikle hayati öneme sahip kararlar alındığında, güvenilirliği artırır ve insanların bu sistemlere daha fazla güven duymasına yardımcı olur. Başka bir deyişle, XAI, yapay zekanın "büyü gibi" görünmesini önler ve insanların bu teknolojiyi daha şeffaf ve anlaşılır bir şekilde kullanmasına yardımcı olur.
-
-Sınıflandırma için basit bir örnek vermek gerekirse;
-
-- Örneğin, siz bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeme konusunda kararlar almak için basit makine öğrenimi modellerini kullanıyor olsun. Bir gün Anadolunun ücra bir küyünden gelmiş bir çiftçi kredi başvurusu yapıyor ve bu model çiftciye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi, sizden bunun nedenini sorar. Malum, çiftçinin ekini var, ülkenin durumu belli :) nasıl açıklarsınız bu durumu oturup çiftçiye bu modelin arkasındaki matematiği anlatacak değilsiniz herhalde :) Adam demez mi, "Ya toprağım başlatma şimdi cebirinden ve kalkülüsünden bana nedenini söyle." Siz bu durumu çiftçiye nasıl açıklarsınız?
-
-İşte bu gibi durumlar da XAI devreye giriyor ve modelin aldığı kararı açıklıyor.
+**Yapay Zeka (AI)**, insan zekasını taklit eden ve _öğrenme, problem çözme, karar verme_ gibi görevleri yerine getirebilen sistemlerdir. AI, veri işleyerek **kalıpları tanır**, **tahminlerde bulunur** ve zamanla **kendini geliştirir**. Teknolojideki hızlı ilerleme sayesinde yapay zeka, _sağlık, otomotiv, finans_ gibi birçok sektörde yaygın olarak kullanılmaktadır. AI, geleceğin en önemli araçlarından biri olarak kabul edilmektedir.
 
 ---
 
-### Peki, Bu Araçların Nasıl Çalıştığını Merak Ettiniz mi?
+### XAI (Açıklanabilir Yapay Zeka) Nedir?
 
-- Makine öğrenmesi modelleri, veri bilimcilerin ve mühendislerin birçok sorunu çözümünde kullandığı bir araçtır. Ancak bu modellerin çoğu, kararlarını açıklamak için tasarlanmamıştır. Bu nedenle, bu modellerin kararlarını açıklamak için XAI tekniklerine ihtiyaç duyulmaktadır.
-- Bu araçların başında ise LIME (Local Interpretable Model-Agnostic Explanations) ve SHAP (SHapley Additive exPlanations) gelmektedir.
-- Bu alanda Türkçe kaynak neredeyse yok, ben sadece İngilizce kaynaklardan ve bu kütüphanelerin GitHub'daki orijinal dokümantasyonlarından yararlanarak sizlere bu konuyu anlatmaya çalışacağım.
-- İleriki zamanlarda bu iki araç dışında yeni çıkan araçları da inceleyip sizlerle paylaşacağım.
+**Açıklanabilir yapay zeka (XAI)**, yapay zeka sistemlerini daha _"insan dostu"_ hale getirmeyi amaçlayan bir yaklaşımdır. Bu sayede yapay zeka sistemlerinin _nasıl kararlar verdiğini_, _hangi bilgileri kullanarak bu sonuçlara ulaştığını_ daha iyi anlayabiliriz. Özellikle _hayati kararlar_ alırken XAI, güvenilirliği artırır ve insanların bu sistemlere daha fazla güven duymasını sağlar. Başka bir deyişle, **XAI**, yapay zekanın _"büyü gibi"_ görünmesini engelleyerek şeffaf ve anlaşılır bir kullanım sunar.
+
+_Gelin bunu bir örnekle açıklayalım:_
+
+Örneğin, bir bankada çalışıyorsunuz ve bu banka, kime kredi verip vermeyeceği konusunda kararlar almak için makine öğrenimi modelleri kullanıyor. Bir gün _Anadolu'nun ücra bir köyünden_ gelen bir çiftçi kredi başvurusu yapıyor, ancak model çiftçiye kredi verilmemesi gerektiğini söylüyor. Doğal olarak çiftçi bu duruma itiraz ederek sizden nedenini sorar. Siz de modelin arkasındaki karmaşık matematiği çiftçiye açıklayamazsınız. İşte böyle durumlarda **XAI** devreye girerek modelin aldığı kararı açıklanabilir hale getirir.
 
 ---
 
-### Simdi bir Lime kodu gorelim
+### Peki, Bu Araçlar Nasıl Çalışıyor?
 
-- Asagidaki kodda, LimeTabularExplainer sınıfını kullanarak bir Lime nesnesi oluşturuyoruz.
-- Bu sınıfın içerisindeki LimeTabularExplainer fonksiyonuna training_data parametresi olarak X_train'i, feature_names parametresi olarak da X_train'in sütun isimlerini veriyoruz.
-- Daha sonra, LimeTabularExplainer sınıfının içerisindeki explain_instance fonksiyonuna data_row parametresi olarak [80000, 800, 0.1] değerlerini, predict_fn parametresi olarak da model.predict_proba fonksiyonunu veriyoruz.
-- Daha sonra, exp.show_in_notebook fonksiyonunu kullanarak Lime aracının çıktısını görebiliyoruz.
+Makine öğrenmesi modelleri, veri bilimcilerin birçok sorunu çözmek için kullandığı güçlü araçlardır. Ancak bu modellerin çoğu _kararlarını açıklamak_ için tasarlanmamıştır. Bu yüzden, modellerin verdiği kararları açıklamak için **XAI tekniklerine** ihtiyaç duyulur. XAI araçları arasında en bilinenleri:
+
+- **LIME** (_Local Interpretable Model-Agnostic Explanations_)
+- **SHAP** (_SHapley Additive exPlanations_)
+
+Bu konuyla ilgili _Türkçe kaynaklar_ sınırlıdır. Ben de İngilizce kaynaklardan ve bu kütüphanelerin GitHub'daki orijinal dokümantasyonlarından yararlanarak bu konuyu sizlere açıklamaya çalışacağım. İlerleyen zamanlarda, yeni çıkan **XAI araçlarını** da inceleyip sizlerle paylaşmayı hedefliyorum.
+
+---
+
+### Şimdi Bir LIME Kodu Görelim
+
+Aşağıdaki kodda, `LimeTabularExplainer` sınıfını kullanarak bir Lime nesnesi oluşturuyoruz. Bu sınıfta, `LimeTabularExplainer` fonksiyonuna:
+
+- `training_data` parametresi olarak **X_train**
+- `feature_names` parametresi olarak **X_train**'in sütun isimlerini veriyoruz.
+
+Daha sonra, `explain_instance` fonksiyonuna:
+
+- `data_row` parametresi olarak `[80000, 800, 0.1]`
+- `predict_fn` parametresi olarak da **model.predict_proba** fonksiyonunu veriyoruz.
+
+Son olarak, `exp.show_in_notebook` fonksiyonunu kullanarak **Lime aracının çıktısını** görüntüleyebiliyoruz.
 
 ---
 
